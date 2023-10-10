@@ -1,0 +1,26 @@
+<resources>
+    <string name="app_name">Labwork2Android</string>
+    <string name="default_title">Default title</string>
+    <string name="default_description">Default description</string>
+    <string name="default_area">Default area</string>
+    <string name="default_cost">Default cost</string>
+    <string name="default_address">Default address</string>
+    <string name="default_owner_name">Default owner name</string>
+    <string name="default_area_label">Площадь</string>
+    <string name="default_address_label">Адрес</string>
+    <string name="default_value">Пусто</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="cost_label">Цена</string>
+    <string name="rent_label">Аренда</string>
+    <string name="owner_name_label">Владелец</string>
+    <string name="back_to_list_button_text">Назад к списку</string>
+    <string name="edit_data">Редактировать</string>
+    <string name="title_label">Заголовок</string>
+    <string name="short_description_label">Краткое описание</string>
+    <string name="description">Полное описание</string>
+    <string name="save_changes">Сохранить</string>
+    <string name="delete_unit">Удалить</string>
+    <string name="go_to_list">К списку</string>
+    <string name="add_new">Добавить ещё один объект</string>
+</resources>

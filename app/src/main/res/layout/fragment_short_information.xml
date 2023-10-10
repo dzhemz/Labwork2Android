@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+
+    <TextView
+        android:id="@+id/titleShortFragment"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10sp"
+        android:text="@string/default_title"
+        app:layout_constraintBaseline_toBaselineOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView android:id="@+id/descriptionShortFragment"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10sp"
+        android:text="@string/default_description"
+        app:layout_constraintTop_toBottomOf="@id/titleShortFragment"
+        app:layout_constraintBottom_toTopOf="@id/areaShortFragment" />
+
+    <TextView android:id="@+id/default_area_label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="10sp"
+        android:text="@string/default_area_label"
+        app:layout_constraintTop_toBottomOf="@id/descriptionShortFragment"
+        app:layout_constraintRight_toLeftOf="@id/areaShortFragment" />
+
+    <TextView android:id="@+id/areaShortFragment"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="10sp"
+            android:text="@string/default_area"
+            app:layout_constraintLeft_toRightOf="@id/default_area_label"
+            app:layout_constraintTop_toBottomOf="@id/descriptionShortFragment"
+        />
+
+    <TextView android:id="@+id/default_address_label"
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:layout_margin="10sp"
+        android:text="@string/default_address_label"
+        app:layout_constraintTop_toBottomOf="@+id/descriptionShortFragment"
+        app:layout_constraintLeft_toRightOf="@id/areaShortFragment"
+        />
+
+    <TextView android:id="@+id/addressShortFragment"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="10sp"
+        android:text="@string/default_address"
+        app:layout_constraintTop_toBottomOf="@id/descriptionShortFragment"
+        app:layout_constraintLeft_toRightOf="@id/default_address_label"
+        />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

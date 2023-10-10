@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:padding="20sp"
+    tools:context=".DetailedInformation">
+
+    <TextView android:id="@+id/title"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:text="@string/default_value"
+        android:layout_margin="10sp"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+
+    <TextView android:id="@+id/short_description"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:text="@string/default_value"
+        android:layout_margin="10sp"
+        app:layout_constraintTop_toBottomOf="@id/title"
+        />
+
+    <TextView android:id="@+id/default_address_label"
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:text="@string/default_address_label"
+        android:layout_margin="10sp"
+        app:layout_constraintTop_toBottomOf="@id/short_description"
+        app:layout_constraintRight_toLeftOf="@id/address"
+        />
+
+    <TextView android:id="@+id/address"
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:text="@string/default_value"
+        android:layout_margin="10sp"
+        app:layout_constraintTop_toBottomOf="@id/short_description"
+        app:layout_constraintRight_toLeftOf="@id/default_area_label"
+        />
+
+    <TextView android:id="@+id/default_area_label"
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:text="@string/default_area_label"
+        android:layout_margin="10sp"
+        app:layout_constraintTop_toBottomOf="@id/short_description"
+        app:layout_constraintRight_toLeftOf="@id/area"
+        />
+    
+    <TextView android:id="@+id/area"
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:text="@string/default_value"
+        android:layout_margin="10sp"
+        app:layout_constraintTop_toBottomOf="@id/short_description"
+        app:layout_constraintLeft_toRightOf="@+id/address"
+        />
+
+    <TextView android:id="@+id/cost_label"
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:text="@string/cost_label"
+        android:layout_margin="10sp"
+        app:layout_constraintTop_toBottomOf="@id/area"
+        app:layout_constraintRight_toLeftOf="@id/cost"
+        />
+
+    <TextView android:id="@+id/cost"
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:text="@string/default_value"
+        android:layout_margin="10sp"
+        app:layout_constraintTop_toBottomOf="@id/area"
+        app:layout_constraintRight_toLeftOf="@id/rent_label"
+        />
+
+    <TextView android:id="@+id/rent_label"
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:text="@string/rent_label"
+        android:layout_margin="10sp"
+        app:layout_constraintTop_toBottomOf="@id/area"
+        app:layout_constraintRight_toLeftOf="@id/rent"
+        />
+
+    <TextView android:id="@+id/rent"
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:text="@string/default_value"
+        android:layout_margin="10sp"
+        app:layout_constraintTop_toBottomOf="@id/area"
+        app:layout_constraintLeft_toRightOf="@id/rent_label"
+        />
+
+    <TextView android:id="@+id/owner_name_label"
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:text="@string/owner_name_label"
+        android:layout_margin="10sp"
+        app:layout_constraintTop_toBottomOf="@id/rent"
+        app:layout_constraintRight_toLeftOf="@id/owner_name"
+        />
+
+    <TextView android:id="@+id/owner_name"
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:text="@string/default_value"
+        android:layout_margin="10sp"
+        app:layout_constraintTop_toBottomOf="@id/rent"
+        app:layout_constraintLeft_toRightOf="@id/owner_name_label"
+        />
+
+    <TextView android:id="@+id/description"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:text="@string/default_value"
+        android:layout_margin="10sp"
+        app:layout_constraintTop_toBottomOf="@id/owner_name"
+        />
+
+    <Button android:id="@+id/back"
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:layout_margin="10sp"
+        android:text="@string/back_to_list_button_text"
+        app:layout_constraintTop_toBottomOf="@id/description"
+        app:layout_constraintRight_toLeftOf="@id/edit"
+        />
+
+    <Button android:id="@+id/edit"
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:layout_margin="10sp"
+        android:text="@string/edit_data"
+        app:layout_constraintTop_toBottomOf="@id/description"
+        app:layout_constraintLeft_toRightOf="@id/back"
+        />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
