@@ -4,7 +4,7 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:padding="20sp"
+    android:padding="10sp"
     tools:context=".DetailedInformation">
 
     <TextView android:id="@+id/title"
@@ -123,20 +123,19 @@
 
     <Button android:id="@+id/back"
         android:layout_height="wrap_content"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_margin="10sp"
         android:text="@string/back_to_list_button_text"
         app:layout_constraintTop_toBottomOf="@id/description"
-        app:layout_constraintRight_toLeftOf="@id/edit"
+
         />
 
     <Button android:id="@+id/edit"
         android:layout_height="wrap_content"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_margin="10sp"
         android:text="@string/edit_data"
-        app:layout_constraintTop_toBottomOf="@id/description"
-        app:layout_constraintLeft_toRightOf="@id/back"
+        app:layout_constraintTop_toBottomOf="@id/back"
         />
 
 
