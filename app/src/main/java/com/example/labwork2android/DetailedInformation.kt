@@ -11,36 +11,54 @@ import androidx.fragment.app.activityViewModels
 import androidx.fragment.app.commit
 import androidx.fragment.app.replace
 import androidx.fragment.app.viewModels
+import com.example.labwork2android.databinding.FragmentDetailedInformationBinding
 
 class DetailedInformation : Fragment(R.layout.fragment_detailed_information) {
     private val viewModel: RealEstateUnitModel by activityViewModels()
+    private var _binding: FragmentDetailedInformationBinding? = null;
+    private val binding get() = _binding!!
+
+    override fun onCreateView(
+        inflater: LayoutInflater,
+        container: ViewGroup?,
+        savedInstanceState: Bundle?
+    ): View? {
+        _binding = FragmentDetailedInformationBinding.inflate(inflater, container, false)
+        val view = binding.root
+        return view
+    }
+
+    override fun onDestroyView() {
+        super.onDestroyView()
+        _binding = null
+    }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         val unit = viewModel.selectedUnit.value
         if (unit != null) {
-            view.findViewById<TextView>(R.id.title).text = unit.title
-            view.findViewById<TextView>(R.id.short_description).text = unit.shortDescription
-            view.findViewById<TextView>(R.id.address).text = unit.address
-            view.findViewById<TextView>(R.id.area).text = unit.area.toString()
-            view.findViewById<TextView>(R.id.cost).text = unit.cost.toString()
-            view.findViewById<TextView>(R.id.rent).text = unit.rent.toString()
-            view.findViewById<TextView>(R.id.owner_name).text = unit.ownerName
-            view.findViewById<TextView>(R.id.description).text = unit.description
+            binding.title.text = unit.title
+            binding.shortDescription.text = unit.shortDescription
+            binding.address.text = unit.address
+            binding.area.text = unit.area.toString()
+            binding.cost.text = unit.cost.toString()
+            binding.rent.text = unit.rent.toString()
+            binding.ownerName.text = unit.ownerName
+            binding.description.text = unit.description
         }
-        view.findViewById<Button>(R.id.back).setOnClickListener {
-            parentFragmentManager.commit{
+
+        binding.back.setOnClickListener {
+            parentFragmentManager.commit {
                 setReorderingAllowed(true)
                 replace<ListOfRealEstateFragment>(R.id.fragment_container_view)
             }
         }
 
-        view.findViewById<Button>(R.id.edit).setOnClickListener {
+        binding.edit.setOnClickListener {
             parentFragmentManager.commit{
                 setReorderingAllowed(true)
                 replace<EditFragment>(R.id.fragment_container_view)
             }
         }
-
     }
 }
