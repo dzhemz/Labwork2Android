@@ -121,12 +121,28 @@
         app:layout_constraintTop_toBottomOf="@id/owner_name"
         />
 
+    <TextView android:id="@+id/geo_position_label"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/label_coordinate"
+        android:layout_margin="10sp"
+        app:layout_constraintTop_toBottomOf = "@id/description"
+        />
+
+    <TextView android:id="@+id/geo_data"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10sp"
+        android:text="@string/default_geo_data_value"
+        app:layout_constraintTop_toBottomOf="@id/geo_position_label"
+        />
+
     <Button android:id="@+id/back"
         android:layout_height="wrap_content"
         android:layout_width="match_parent"
         android:layout_margin="10sp"
         android:text="@string/back_to_list_button_text"
-        app:layout_constraintTop_toBottomOf="@id/description"
+        app:layout_constraintTop_toBottomOf="@id/geo_data"
 
         />
 

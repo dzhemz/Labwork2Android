@@ -11,6 +11,9 @@ import androidx.fragment.app.activityViewModels
 import androidx.fragment.app.commit
 import androidx.fragment.app.replace
 import androidx.fragment.app.viewModels
+import kotlinx.coroutines.CoroutineScope
+import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.launch
 
 class EditFragment: Fragment(R.layout.fragment_edit) {
     private val viewModel: RealEstateUnitModel by activityViewModels()
@@ -90,9 +93,20 @@ class EditFragment: Fragment(R.layout.fragment_edit) {
                 rent.text.toString().toInt(),
                 ownerName.text.toString(),
                 description.text.toString(),
-                shortDescription.text.toString())
+                shortDescription.text.toString(), "")
 
-            viewModel.selectUnit(newUnit)
+            CoroutineScope(Dispatchers.IO).launch {
+                try {
+                    val response = GeocoderApi.retrofitService.getPoints(
+                        "1bacd9fe-d1a7-4fa2-b27c-7cbffb86fbca", newUnit.address, "json")
+                    val regex = Regex("\"pos\":(?<pos>[^}]*)");
+                    val result = regex.find(response)!!
+                    val (pos) = result.destructured
+                    newUnit.position = pos
+                }
+                catch (_ :Exception) {}
+            }
+
             viewModel.mutableList.add(newUnit)
             return@setOnClickListener
         }

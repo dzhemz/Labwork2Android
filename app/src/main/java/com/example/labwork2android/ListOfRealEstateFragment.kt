@@ -34,7 +34,6 @@ class ListOfRealEstateFragment : Fragment(R.layout.list_of_real_estate_fragment)
             .withOnItemActivatedListener(OnItemActivatedListener { item, _ ->
                 item.selectionKey?.let {
                     viewModel.selectUnit(it)
-                    viewModel.selectedUnit.value
                     parentFragmentManager.commit {
                         replace<DetailedInformation>(R.id.fragment_container_view)
                         setReorderingAllowed(true)
@@ -52,32 +51,6 @@ class ListOfRealEstateFragment : Fragment(R.layout.list_of_real_estate_fragment)
                 setReorderingAllowed(true)
             }
         }
-    }
-
-    override fun onAttach(context: Context) {
-        super.onAttach(context)
-//        val units = this.view?.findViewById<RecyclerView>(R.id.view_of_units)
-//        units.adapter = CustomAdapter(viewModel.mutableList)
-//        units.layoutManager = LinearLayoutManager(this.context)
-//
-//        var tracker = SelectionTracker.Builder<RealEstateUnit>("tracker",
-//            units,
-//            RealEstateUnitKeyProvider(listOfRealEstate),
-//            MyDetailsLookup(units),
-//            StorageStrategy.createParcelableStorage(RealEstateUnit::class.java))
-//            .withOnItemActivatedListener(OnItemActivatedListener { item, _ ->
-//                item.selectionKey?.let {
-//                    viewModel.selectUnit(it)
-//                    viewModel.selectedUnit.value
-//                    parentFragmentManager.commit {
-//                        replace<DetailedInformation>(R.id.fragment_container_view)
-//                        setReorderingAllowed(true)
-//                    }
-//                }
-//                return@OnItemActivatedListener true
-//            })
-//            .withSelectionPredicate(SelectionPredicates.createSelectSingleAnything())
-//            .build()
     }
 
 

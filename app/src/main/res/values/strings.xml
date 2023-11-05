@@ -23,4 +23,6 @@
     <string name="delete_unit">Удалить</string>
     <string name="go_to_list">К списку</string>
     <string name="add_new">Добавить ещё один объект</string>
+    <string name="label_coordinate">Координаты объекта согласно Яндекс Геокодеру</string>
+    <string name="default_geo_data_value">Данных нет</string>
 </resources>

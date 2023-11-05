@@ -9,13 +9,12 @@ import com.example.labwork2android.databinding.ActivityMainBinding
 
 class MainActivity : AppCompatActivity() {
     private val viewModel: RealEstateUnitModel by viewModels()
-    private lateinit var binding: ActivityMainBinding;
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         supportFragmentManager.commit {
             setReorderingAllowed(true)
             add<ListOfRealEstateFragment>(R.id.fragment_container_view) }
-        val view = binding.root
-        setContentView(view)
+        setContentView(R.layout.activity_main)
     }
 }

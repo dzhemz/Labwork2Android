@@ -2,6 +2,7 @@ package com.example.labwork2android
 
 import android.os.Parcelable
 import kotlinx.parcelize.Parcelize
+import java.text.FieldPosition
 
 @Parcelize
 data class RealEstateUnit(val title: String,
@@ -11,4 +12,5 @@ data class RealEstateUnit(val title: String,
                           var rent: Int,
                           var ownerName: String,
                           var description: String,
-                          var shortDescription: String): Parcelable
+                          var shortDescription: String,
+                          var position: String): Parcelable
